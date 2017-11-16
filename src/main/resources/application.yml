@@ -1,0 +1,8 @@
+server:
+  port: 8000
+
+wiki:
+  config:
+    path:
+      images: D:/wiki/images/
+      articles: D:/wiki/articles/

@@ -1,0 +1,9 @@
+<div>
+    <div class="article-title text-center row">
+        <h3>{{article.title}}</h3>
+        <span class="pull-right">{{article.author}} @ {{article.createDate}}</span>
+    </div>
+    <div class="article-body row">
+        <div ng-bind-html="article.content | trusted"></div>
+    </div>
+</div>

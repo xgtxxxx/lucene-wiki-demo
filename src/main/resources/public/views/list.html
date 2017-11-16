@@ -1,0 +1,42 @@
+<div>
+    <div class="row">
+        <form name="searchForm" class="col-md-10 col-md-offset-1">
+            <div class="col-md-10">
+                <input type="text" class="form-control input-lg" ng-model="keyword">
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-info btn-lg" ng-click="search(true)">Search</button>
+            </div>
+        </form>
+    </div>
+    <div>
+        <div style="border-bottom: 2px solid darkslategray; margin: 15px 0px 5px 0px; color: firebrick;">
+            Find {{index}} of {{total}}
+            <div class="pull-right">
+                <a href="javascript:;" ng-click="new()">NEW</a>
+            </div>
+        </div>
+        <div ng-if="articles.length==0">
+            <p>Could not find any articles.</p>
+        </div>
+        <div class="article-panel panel panel-default" ng-repeat="article in articles">
+            <div class="panel-heading">
+                <span class="panel-title">
+                    <a role="button" ng-click="detail(article)">
+                        <span ng-bind-html="article.title | trusted"></span>
+                    </a>
+                </span>
+                <div class="pull-right"><a href="javascript:;" ng-click="edit(article)">EDIT</a>&nbsp;|&nbsp;<a href="javascript:;" ng-click="delete(article)">DELETE</a>&nbsp;<span ng-bind-html="article.author | trusted"></span> @ {{article.createDate}}</div>
+            </div>
+            <div class="panel-body">
+                <a role="button" ng-click="detail(article)">
+                    <span ng-bind-html="article.content | trusted"></span>
+                    &nbsp;...
+                </a>
+            </div>
+        </div>
+        <div ng-if="index < total"><a role="button" ng-click="search()">Load More</a></div>
+    </div>
+    <div>
+    </div>
+</div>

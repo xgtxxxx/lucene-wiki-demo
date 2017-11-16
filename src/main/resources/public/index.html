@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="b2s-wiki">
+<head>
+    <meta charset="UTF-8">
+    <title>B2S Wiki</title>
+    <link href="style/bootstrap.css" rel="stylesheet"/>
+    <link href="style/app.css" rel="stylesheet"/>
+    <script src="script/lib/jquery.js"></script>
+    <script src="script/lib/bootstrap.js"></script>
+    <script src="script/lib/angular.min.js"></script>
+    <script src="script/lib/angular-route.js"></script>
+    <script src="script/lib/ueditor.config.js"></script>
+    <script src="script/lib/ueditor.all.js"></script>
+
+    <script src="script/app.js"></script>
+</head>
+<body ng-controller="BaseController">
+<nav id="header" class="navbar navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand">B2S WIKI</a>
+        </div>
+        <div class="navbar-header pull-right">
+            <a href="#" class="navbar-item">Gavin | logout</a>
+        </div>
+    </div>
+</nav>
+<div id="content" class="container" ng-view></div>
+</body>
+</html>

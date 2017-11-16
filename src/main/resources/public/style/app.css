@@ -1,0 +1,36 @@
+#header{
+    background-color: #ffffff;
+}
+
+#header .navbar-item{
+    float: left;
+    padding: 15px 15px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.header-shadow{
+    box-shadow: 0 0 5px #888;
+}
+#content{
+    margin-top: 70px;
+}
+
+.panel-title{
+    font-size:18px;
+}
+
+.article-title{
+    text-align: center;
+}
+
+.article-title h3{
+    border-bottom:1px solid #ccc;
+}
+
+.article-title span{
+    margin-top: -10px;
+}
+
+.article-body{
+    margin-top: 15px;
+}
